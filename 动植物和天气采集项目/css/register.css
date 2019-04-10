@@ -1,0 +1,32 @@
+body{
+	height: 100%;
+	width: 100%;
+	min-height: 800px;
+	min-width: 800px;
+	background-size:100% 100%;
+	background-attachment: fixed;
+	background-image:url(../img/banner/banner5.jpg);
+}
+/*.register{
+	top:40px;
+}*/
+.item{
+	/*background: red;*/
+}
+.item input.verification-code,
+.verification-code-img{
+	display: block;
+	width: 68%;
+	float: left;
+}
+.item button.verification-code-button,
+.verification-code-button-img{
+	float: right;
+	display: block;
+	width: 30%;
+	font-size: 14px;
+	letter-spacing: 0;
+}
+.verification-code-button-img{
+	height: 40px;
+}

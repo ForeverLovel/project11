@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<title>遇农</title>
+	<meta charset="utf-8"/>
+	 <!-- 优先使用 IE 最新版本和 Chrome -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+     <!-- 页面描述 -->
+    <meta name="description" content="遇农"/>
+    <!-- 页面关键词 -->
+    <meta name="keywords" content="遇农"/>
+    <!-- 网页作者 -->
+    <meta name="author" content=""/>
+    <!-- 搜索引擎抓取 -->
+    <meta name="robots" content="all"/>
+    <!-- 为移动设备添加 viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- `width=device-width` 会导致 iPhone 5 添加到主屏后以 WebApp 全屏模式打开页面时出现黑边 http://bigc.at/ios-webapp-viewport-meta.orz -->
+    <!-- iOS 设备 begin -->
+    <meta name="apple-mobile-web-app-title" content="遇农"/>
+    <!-- 添加到主屏后的标题（iOS 6 新增） -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+ 
+    <meta name="apple-itunes-app" content="app-id=myAppStoreID, affiliate-data=myAffiliateData, app-argument=myURL">
+    <!-- 添加智能 App 广告条 Smart App Banner（iOS 6+ Safari） -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <!-- 设置苹果工具栏颜色 -->
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+    <!-- 启用360浏览器的极速模式(webkit) -->
+    <meta name="renderer" content="webkit">
+    <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 不让百度转码 -->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+    <meta name="HandheldFriendly" content="true">
+    <!-- 微软的老式浏览器 -->
+    <meta name="MobileOptimized" content="320">
+    <!-- uc强制竖屏 -->
+    <meta name="screen-orientation" content="portrait">
+    <!-- QQ强制竖屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <!-- QQ强制全屏 -->
+    <meta name="x5-fullscreen" content="true">
+    <!-- UC应用模式 -->
+    <meta name="browsermode" content="application">
+    <!-- QQ应用模式 -->
+    <meta name="x5-page-mode" content="app">
+	<link rel="stylesheet" type="text/css" href="css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="css/index1.css"/>
+    
+	<!-- 	/*ie9兼容h5标签*/
+	/*在 IE 浏览器的版本小于 IE9 时将读取 html5.js 文件，并解析它*/
+	/*并且要放到head标签中*/ -->
+	<!--[if lt IE 9]>
+	    <script src="http://cdn.static.runoob.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+       <!-- 头部区域 -->
+        <header>
+            
+                
+
+            <!-- 顶部导航 -->
+            <div class="top-nav">
+
+
+                <div class="date-choice" title="选择时间,查看选择作物种植温度">
+
+                    <form name="date">
+
+                      <select name="year" onchange="selectYear(this.value)">
+
+                        <option value="">选择 年</option>
+
+                      </select>
+
+                      <select name="month" onchange="selectMonth(this.value)">
+
+                        <option value="">选择 月</option>
+
+                      </select>
+
+                      <select name="day">
+
+                        <option value="">选择 日</option>
+
+                      </select>
+
+                    </form>
+
+                </div>
+                    <!-- <span id="showNav" class="show-nav">三</span> -->
+
+                    <ul>
+
+                        <li><a href="register.html">注册</a></li>
+
+                        <li><a href="login.html">登陆</a></li>
+
+                        <li><a href="#"  class="top-nav-active">首页</a></li>
+
+                    </ul>
+
+            </div>
+        </header>
+
+       
+
+        <!-- 中间区域-->
+        <div class="main">
+             <!-- logo -->
+            <div class="logo">logo</div>
+            <!-- 地图展示 -->
+            <div class="map" id="map">
+            
+            </div>
+
+            <section>
+                
+                <!-- 数据显示图像区域 -->
+                <div class="data-display-diagram">
+
+                    <!-- 下一页按钮 -->
+                    <img src="img/mark/arrow.png" class="arrow" /> 
+
+                    <div class="data-display-diagram-table">
+                        
+                        <!-- 三基点温度 -->
+                        <table>
+                            
+                            <thead>
+
+                                <tr>
+                                    <th>作物</th>
+                                    <th>最低温度</th>
+                                    <th>最适温度</th>
+                                    <th>最低温度</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <th>水稻</th>
+                                    <td>10℃-12℃</td>
+                                    <td>30℃-32℃</td>
+                                    <td>36℃-38℃</td>
+                                </tr>
+
+                                <tr>
+                                    <th>小麦</th>
+                                    <td>3℃-4.5℃</td>
+                                    <td>20℃-22℃</td>
+                                    <td>30℃-32℃</td>
+                                </tr>
+
+                                <tr>
+                                    <th>玉米</th>
+                                    <td>8℃-10℃</td>
+                                    <td>30℃-32℃</td>
+                                    <td>40℃-44℃</td>
+                                </tr>
+
+                                <tr>
+                                    <th>油菜</th>
+                                    <td>4℃-5℃</td>
+                                    <td>20℃-25℃</td>
+                                    <td>30℃-32℃</td>
+                                </tr>
+
+                                <tr>
+                                    <th>棉花</th>
+                                    <td>13℃-14℃</td>
+                                    <td>28℃</td>
+                                    <td>35℃</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <div class="data-display-diagram-table  hidden">
+                        
+                        <!-- 三基点温度 -->
+                        <table>
+                            
+                            <thead>
+
+                                <tr>
+                                    <th>农作物</th>
+                                    <th>最低温度</th>
+                                    <th>最适温度</th>
+                                    <th>最低温度</th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <th>水稻</th>
+                                    <td>10℃-12℃</td>
+                                    <td>30℃-32℃</td>
+                                    <td>36℃-38℃</td>
+                                </tr>
+
+                                <tr>
+                                    <th>小麦</th>
+                                    <td>3℃-4.5℃</td>
+                                    <td>20℃-22℃</td>
+                                    <td>30℃-32℃</td>
+                                </tr>
+
+                                <tr>
+                                    <th>玉米</th>
+                                    <td>8℃-10℃</td>
+                                    <td>30℃-32℃</td>
+                                    <td>40℃-44℃</td>
+                                </tr>
+
+                                <tr>
+                                    <th>油菜</th>
+                                    <td>4℃-5℃</td>
+                                    <td>20℃-25℃</td>
+                                    <td>30℃-32℃</td>
+                                </tr>
+
+                                <tr>
+                                    <th>棉花</th>
+                                    <td>13℃-14℃</td>
+                                    <td>28℃</td>
+                                    <td>35℃</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                    <!-- 竖排文字 -->
+                    <!-- <div class="vertical-text1">
+                        律回岁晚冰霜少
+                        
+                    </div>
+                    <div class="vertical-text2">
+                        春到人间草木知
+                        
+                    </div>
+                    <div class="vertical-text3">
+                        便觉眼前生意满
+                        
+                    </div>
+                    <div class="vertical-text4">
+                        东风吹水绿参差
+                        
+                    </div> -->
+
+                    
+                
+                <!-- <img src="img/logo.png" class="logo" /> -->
+                </div>
+
+                <!-- banner图 -->
+                <div class="banner" id="banner">
+                    
+                    <div class="banner-item" id="banner-item">
+                        
+                        <!-- 农作物介绍在右边 -->
+                        <div class="banner-items" style="display:block;">
+
+                            <div class="crop-show">
+                                
+                                <!-- 农作物图片展示 -->
+                                <div class="crop-show-banner">
+
+                                    <img src="img/Unhusked-rice/pic5.jpg"/>
+                                    
+                                </div>
+
+                                <!-- 农作物介绍 -->
+                                <div class="crop-show-introduce">
+
+                                    <div class="crop-show-introduce-title">稻谷<span>Unhusked&nbsp;rice</span></div>
+                                    属禾本科稻属普通栽培稻亚属中的普通稻亚种。人类共确认出22类稻谷，但是唯一用于大宗贸易的是普通类稻谷。
+                                    <br/>
+                                    <span class="green">最低的温度：10℃-12℃；最适温度：30℃-32℃；最低温度：36℃-38℃</span>
+
+                                </div>
+
+                                <!-- 农作物小图片展示生长情况 -->
+                                <div class="crop-show-content">
+
+                                    <ul>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Unhusked-rice/pic1.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Unhusked-rice/pic2.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Unhusked-rice/pic3.jpg"/></a></li>
+
+                                        <li><a href="#"><img src="img/Unhusked-rice/pic4.jpg"/></a></li>
+
+                                    </ul>
+
+                                 </div>
+
+                            </div>
+                        </div>
+
+
+                         <!-- 农作物介绍在左边 -->
+                        <div class="banner-items">
+
+                            <div class="crop-show">
+                                
+                                <!-- 农作物图片展示 -->
+                                <div class="crop-show-banner crop-show-banner-left">
+
+                                    <img src="img/Wheat/pic5.jpg"/>
+
+                                </div>
+
+                                <!-- 农作物介绍 -->
+                                <div class="crop-show-introduce crop-show-introduce-left">
+
+                                    <div class="crop-show-introduce-title">小麦<span>Wheat</span></div>
+                                    小麦是小麦系植物的统称，是单子叶植物，是一种在世界各地广泛种植的禾本科植物，小麦的颖果是人类的主食之一，磨成面粉后可制作面包、馒头、饼干、面条等食物，发酵后可制成啤酒、酒精、白酒（如伏特加），或生质燃料。
+                                    <br/>
+                                    小麦是三大谷物之一，几乎全作食用，仅约有六分之一作为饲料使用。两河流域是世界上最早栽培小麦的地区，中国是世界最早种植小麦的国家之一。
+                                    <br/>
+                                    <span class="green">最低的温度：3℃-4.5℃；最适温度：20℃-22℃；最低温度：30℃-32℃</span>
+
+                                </div>
+
+                                <!-- 农作物小图片展示生长情况 -->
+                                <div class="crop-show-content crop-show-content-bgcolor">
+
+                                    <ul>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Wheat/pic1.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Wheat/pic2.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Wheat/pic3.jpg"/></a></li>
+
+                                        <li><a href="#"><img src="img/Wheat/pic4.jpg"/></a></li>
+
+                                    </ul>
+
+                                 </div>
+
+                            </div>
+                        </div>
+
+
+                         <!-- 农作物介绍在右边 -->
+                        <div class="banner-items">
+
+                            <div class="crop-show">
+                                
+                                <!-- 农作物图片展示 -->
+                                <div class="crop-show-banner">
+
+                                    <img src="img/Corn/pic1.jpg"/>
+
+                                </div>
+
+                                <!-- 农作物介绍 -->
+                                <div class="crop-show-introduce">
+
+                                    <div class="crop-show-introduce-title">玉米<span>Corn</span></div>
+                                   玉米是禾本科玉蜀黍属一年生草本植物。别名：玉蜀黍、棒子、包谷、包米、包粟、玉茭、苞米、珍珠米、苞芦、大芦粟，东北辽宁话称珍珠粒，潮州话称薏米仁，粤语称为粟米，闽南语称作番麦。
+                                   玉米是一年生雌雄同株异花授粉植物， 植株高大， 茎强壮， 是重要的粮食作物和饲料作物， 也是全世界总产量最高的农作物。
+                                    <br/>
+                                    <span class="green">最低的温度：8℃-10℃；最适温度：30℃-32℃；最低温度：40℃-44℃</span>
+
+                                </div>
+
+                                <!-- 农作物小图片展示生长情况 -->
+                                <div class="crop-show-content">
+
+                                    <ul>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Corn/pic5.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Corn/pic2.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Corn/pic3.jpg"/></a></li>
+
+                                        <li><a href="#"><img src="img/Corn/pic4.jpg"/></a></li>
+
+                                    </ul>
+
+                                 </div>
+
+                            </div>
+                        </div>
+
+
+
+                         <!-- 农作物介绍在左边 -->
+                        <div class="banner-items">
+
+                            <div class="crop-show">
+                                
+                                <!-- 农作物图片展示 -->
+                                <div class="crop-show-banner crop-show-banner-left">
+
+                                    <img src="img/Rape/pic1.jpg"/>
+
+                                </div>
+
+                                <!-- 农作物介绍 -->
+                                <div class="crop-show-introduce crop-show-introduce-left">
+
+                                    <div class="crop-show-introduce-title">油菜<span>Rape</span></div>
+                                    欧洲油菜 ( Brassica napus L. ) 属十字花科芸薹属，又名油麻菜籽，麻油菜籽等。欧洲油菜目前主要被当作油料作物，有的时候也被当作动物饲料来使用。近些年，在油料作物种植中，欧洲油菜已跃居第二 ( 仅次于大豆) 在世界各地广泛种植。野生的欧洲油菜品种含有大量的芥子酸，这种物质会对人们的身体健康造成危害。因此，加拿大首先培育出了一种低芥子酸、低芥子油苷的新栽培种 Canola。
+                                    <br/>
+                                    <span class="green">最低的温度：4℃-5℃；最适温度：20℃-25℃；最低温度：30℃-32℃</span>
+
+                                </div>
+
+
+                                <!-- 农作物小图片展示生长情况 -->
+                                <div class="crop-show-content crop-show-content-bgcolor">
+
+                                    <ul>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Rape/pic2.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Rape/pic3.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/Rape/pic4.jpg"/></a></li>
+
+                                        <li><a href="#"><img src="img/Rape/pic5.jpg"/></a></li>
+
+                                    </ul>
+
+                                 </div>
+
+                            </div>
+                        </div>
+
+
+
+
+                         <!-- 农作物介绍在右边 -->
+                        <div class="banner-items">
+
+                            <div class="crop-show">
+                                
+                                <!-- 农作物图片展示 -->
+                                <div class="crop-show-banner">
+
+                                    <img src="img/cotton/pic1.jpg"/>
+
+                                </div>
+
+                                <!-- 农作物介绍 -->
+                                <div class="crop-show-introduce">
+
+                                    <div class="crop-show-introduce-title">棉花<span>Cotton</span></div>
+                                    棉花，是锦葵科（Malvaceae）棉属（Gossypium）植物的种籽纤维，原产于亚热带
+                                    花朵乳白色，开花后不久转成深红色然后凋谢，留下绿色小型的蒴果，称为棉铃。棉铃内有棉籽，棉籽上的茸毛从棉籽表皮长出，塞满棉铃内部，棉铃成熟时裂开，露出柔软的纤维。
+                                    <br/>
+                                    <span class="green">最低的温度：10℃-12℃；最适温度：30℃-32℃；最低温度：36℃-38℃</span>
+
+                                </div>
+
+                                <!-- 农作物小图片展示生长情况 -->
+                                <div class="crop-show-content">
+
+                                    <ul>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/cotton/pic2.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/cotton/pic3.jpg"/></a></li>
+
+                                        <li style="margin-right: 1.2%;"><a href="#"><img src="img/cotton/pic4.jpg"/></a></li>
+
+                                        <li><a href="#"><img src="img/cotton/pic5.jpg"/></a></li>
+
+                                    </ul>
+
+                                 </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 点击圆点按钮 -->
+                    <div class="banner-items-dots" id="banner-items-dots">
+                        <span class="banner-items-dots-active"></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <a href="javascript:void(0)" class="banner-items-button prev" id="prev"></a>
+                    <a href="javascript:void(0)" class="banner-items-button next" id="next"></a>
+                    
+
+                </div>
+
+
+                <!--二十四节气 -->
+                <div class="twenty-four-solar-terms">
+                    <!-- 标题 -->
+                    <div class="title">二十四节气</div>
+                    <div class="title-english">twenty&nbsp;four&nbsp;solar&nbsp;terms</div>
+
+                        <div class="twenty-four-solar-terms-content">
+
+                            <ul>
+
+                                <li style="margin-right: 1.2%;"><a href="#"><img src="img/picture/pic5.jpg"/></a></li>
+
+                                <li style="margin-right: 1.2%;"><a href="#"><img src="img/picture/pic6.png"/></a></li>
+
+                                <li style="margin-right: 1.2%;"><a href="#"><img src="img/picture/pic8.jpg"/></a></li>
+
+                                <li><a href="#"><img src="img/picture/pic7.png"/></a></li>
+
+                            </ul>
+
+                        </div>
+                </div>
+
+                <!-- 关于这个网站的介绍 -->
+                <div class="collection-of-animals-and-plants">
+
+                    <div class="collection-of-animals-and-plants-title">Web&nbsp;&nbsp;Introduce</div>
+                    <div class="collection-of-animals-and-plants-content">
+                        植物也知阴晴柳树在夏季里，柳叶下垂，随风摇摆，不失为一种景致；但如果发现柳叶变成白色，就预兆着阴雨天气将会来临。其实，仔细观察就会发现，并非柳叶变白，而是柳叶在阴雨天前会全部反转过来，而柳叶的反面是浅绿色的，表面还带一层“白霜”。如果你有兴趣，不妨在夏秋时节的阴雨前后观察、验证一番。南瓜藤的顶端通常都是向下面缓缓趋前生长的，但是，倘若在夏季的早晨，发现南瓜藤的顶端普遍朝上，则预示着天气将由晴转雨。反之，若在阴雨天气里发现南瓜藤的顶端普遍朝下，则预示着天气将要转晴。桃竹是我国南方的一种植物，它每年都要长笋子。当笋子长在母竹中间时（俗称为“娘抱崽”），就预兆着当年的冬天比较冷；反之，当笋子长在母竹的外围时（俗称为“崽抱娘”），则预示着当年的冬天比较暖和。含羞草是很奇妙的：你碰它一下，它的叶子会合拢起来，又垂下去，像害羞似的。这其中，因为“害羞”的程度不一样，预示的天气也不一样：如果被触动的含羞草叶子很快合拢、下垂，之后，需经过相当长的时间才能恢复原态，则说明天气将艳阳高照，晴空万里；反之，叶子受触后收缩缓慢、下垂迟缓，或叶子稍一闭后即张开，则预示着风雨即将来临。
+                    </div>
+                </div>
+
+                <!-- 气候展示 -->
+                <div class="climate-display">
+            
+                    <img src="img/picture/pic9.jpg" class="climate-display-img" />
+
+                    <div class="climate-display-box">
+
+                        <div class="climate-display-title">气候展示</div>
+
+                        <div class="climate-display-title-english">Climate&nbsp;display</div>
+
+                        <img src="img/picture/pic9.jpg" class="climate-display-box-img"/>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- 尾部区域 -->
+            <footer>
+                <div class="footer-logo">
+                    <img src="img/picture/pic10.png"/>
+                </div>
+
+                <div class="footer-title">遇农</div>
+            </footer>
+        </div>
+
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script src="https://img.hcharts.cn/highmaps/highmaps.js"></script>
+<script src="https://img.hcharts.cn/highcharts/modules/drilldown.js"></script>
+<script src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/map.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<!-- <script type="text/javascript" src="js/login.js"></script> -->
+</body>
+</html>

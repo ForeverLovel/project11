@@ -1,0 +1,614 @@
+
+
+/*头部信息*/
+header{
+
+	position: fixed;
+	height: 50px;
+	width: 100%;
+	box-shadow: 0 1px 1px  0 rgba(17,27,14,0.5);
+	z-index: 999;
+	background: white;
+}
+
+.top-nav{
+
+	height: 50px;
+	/*background: red;*/
+	width: 95%;
+	margin:auto;
+
+}
+
+.top-nav .date-choice{
+	width: 20%;
+	float: left;
+	height: 50px;
+	/*background: yellow;*/
+}
+
+.date-choice select{
+	height: 30px;
+	display: block;
+	float: left;
+	width:30%;
+	margin-top:10px;
+	margin-left: 3%;
+	border:0;
+	border:2px solid rgb(82,115,98,0.4);
+	border-radius: 6px;
+}
+
+.top-nav ul{
+	float: right;
+	width:40%;
+	/*background: yellow;*/
+}
+
+.top-nav ul li{
+	float: right;
+	line-height: 50px;
+	text-align: center;
+	width: 25%;
+}
+
+.top-nav ul li a:hover{
+	display: block;
+	color:white;
+	background: rgb(82,115,98);
+	transition: 0.2s;
+}
+
+.top-nav .show-nav{
+	height: 50px;
+	width: 55px;
+	background: red;
+	float: right;
+	/*background-color: rgba(82,81,82);*/
+}
+
+.show-nav:hover{
+	-webkit-filter: grayscale(60%); /* Chrome, Safari, Opera */
+	-o-filter: grayscale(60%);
+	-moz-filter: grayscale(60%);
+	-ms-filter: grayscale(60%);
+    filter: grayscale(60%);
+  
+}
+
+.top-nav-active{
+	display: block;
+	background: rgb(82,115,98);
+	color:white;
+}
+/*地图展示*/
+.map{
+	height: 600px;
+	width: 90%;
+	/*background: red;*/
+	/*border:2px solid black;*/
+	margin:auto;
+}
+/*页面logo*/
+.logo{
+	background: #99CC99;
+	height: 120px;
+	line-height: 120px;
+	text-align: center;
+	width: 100%;
+}
+/*中间内容*/
+.main{
+	position: relative;
+	top:50px;
+	height: auto;
+	min-height: 2000px;
+	/*background: #90EE90;*/
+	width: 95%;
+	margin:auto;
+}
+
+/*数据显示区域*/
+.data-display-diagram{
+	
+	position: relative;
+	height: auto;
+	min-height: 320px;
+	width: 90%;
+	float: right;
+	background:rgb(248,252,250);
+	margin-top: 10px;
+	margin-bottom: 10px;
+
+}
+.data-display-diagram .arrow{
+	position: absolute;
+	height: 40px;
+	width: 15px;
+	right: 6px;
+	top:50%;
+	margin-top: -5px;
+	z-index: 888;
+	background:#CCFF99;
+}
+
+/*三基点温度展示*/
+.data-display-diagram-table{
+	/*overflow: hidden;*/
+	position: absolute;
+	top:0;
+	left:0;
+	height: 320px;
+	width: 100%;
+	display: block;
+	/*background: red;*/
+}
+.data-display-diagram-table table{
+	margin:auto;
+	height: 320px;
+	width:100%;
+	border-collapse:collapse;
+	/*border:1px solid #CCCCFF;*/
+	box-sizing: border-box;
+}
+/*.data-display-diagram-table table tr{
+	height: 52px;
+}*/
+.data-display-diagram-table table tr td,
+.data-display-diagram-table table tr th{
+	height:40px;
+	width:25%;
+	border:1px solid #CCCCFF;
+	box-sizing: border-box;
+	display: table-cell;
+    vertical-align: inherit;
+    text-align: center;
+    font-size: 16px;
+}
+.data-display-diagram-table table tr th{
+	font-size: 17px;
+}
+
+/*banner图*/
+
+.banner{
+	position: relative;
+	overflow: hidden;
+	height: 691px;
+	width: 100%;
+	/*background: red;*/
+}
+.banner-item{
+	position: relative;
+	height: auto;
+	min-height: 691px;
+	width: 100%;
+	/*background: green;*/
+}
+.banner-items{
+	position:absolute;
+	top:0;
+	left:0; 
+	height: 691px;
+	width: 100%;
+	display: none;
+}
+.crop-show{
+	position: relative;
+	height: auto;
+	min-height: 691px;
+	width: 100%;
+	/*background: yellow;*/
+}
+.crop-show-banner{
+	height: 370px;
+	width: 70%;
+}
+.crop-show-banner img{
+	height: 370px;
+	width: 100%;
+	display: block;
+	float: left;
+}
+.crop-show-introduce{
+	position: absolute;
+	left: 65%;
+	top:85px;
+	height: auto;
+	min-height: 250px;
+	width: 300px;
+	background: white;
+	z-index: 888;
+	padding:20px;
+	box-sizing: border-box;
+	line-height: 30px;
+	border-radius: 10px;
+	-moz-border-radius: 10px;
+	-o-border-radius: 10px;
+	-ms-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	box-shadow: 0 0 3px rgba(17,27,14,0.8);
+}
+.crop-show-introduce-title{
+	height: auto;
+	min-height: 42px;
+	text-align: center;
+	width:50%;
+	margin:0 auto 6px auto;
+	font-size: 20px;
+	font-weight: 700;
+	/*background:red;*/
+	letter-spacing: 5px;
+}
+.crop-show-introduce-title span{
+	font-weight: normal;
+	display: block;
+	letter-spacing: 0px;
+	font-size: 15px;
+}
+.crop-show-content{
+	position: absolute;
+	top:310px;
+	left: 0;
+	background: -moz-linear-gradient(top, rgb(25,55,53) 0%, rgb(24,55,57) 100%);
+    background: -webkit-gradient(linear, top, bottom, color-stop(0%,rgb(25,55,53)), color-stop(100%,rgb(24,55,57)));
+    background: -webkit-linear-gradient(top, rgb(25,55,53) 0%,rgb(24,55,57) 100%);
+    background: -o-linear-gradient(top, rgb(25,55,53) 0%,rgb(24,55,57) 100%);
+    background: -ms-linear-gradient(top, rgb(325,55,53) 0%,rgb(24,55,57) 100%);
+    background: linear-gradient(to bottom, rgb(25,55,53) 0%,rgb(24,55,57) 100%);
+	height:380px;
+	width: 100%;
+	
+}
+.crop-show-content ul{
+	height: 240px;
+	width: 80%;
+	margin:90px auto auto auto;
+
+}
+.crop-show-content ul li,
+.crop-show-content ul li img{
+	height: 240px;
+	width: 24%;
+	float: left;
+	background: white;
+	line-height: 240px;
+	text-align: center;
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+.crop-show-content ul li img{
+	width: 100%;
+}
+/*农作物图片展示放在右边*/
+.crop-show-banner-left{
+	height: 370px;
+	width: 70%;
+	float: right;
+}
+.crop-show-banner-left img{
+	height: 370px;
+	width: 100%;
+	display: block;
+	float: left;
+}
+.crop-show-introduce-left{
+	left:auto;
+	right: 65%;
+	top:85px;
+}
+.crop-show-content-bgcolor{
+	background: -moz-linear-gradient(top, rgb(30,68,91) 0%, rgb(29,68,93) 100%);
+    background: -webkit-gradient(linear, left top , left bottom, color-stop(0%,rgb(30,68,91)), color-stop(100%,rgb(29,68,93)));
+    background: -webkit-linear-gradient(top, rgb(30,68,91) 0%,rgb(29,68,93) 100%);
+    background: -o-linear-gradient(top, rgb(30,68,91) 0%,rgb(29,68,93) 100%);
+    background: -ms-linear-gradient(top, rgb(30,68,91) 0%,rgb(29,68,93) 100%);
+    background: linear-gradient(to bottom, rgb(30,68,91) 0%,rgb(29,68,93) 100%);
+}
+.banner-items-dots{
+	position: absolute;
+	right:25px;
+	bottom: 25px;
+}
+.banner-items-dots span{
+	height:15px;
+	width:15px;
+	display: block;
+	float: left;
+	border-radius:50%;
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.6) inset;
+	background-color:rgba(17,24,14,0.8);
+	margin-left:10px;
+}
+.banner-items-dots span.banner-items-dots-active{
+	background: white;
+	box-shadow: 0 0 0 2px rgba(255,255,255,0.6) inset;
+}
+.banner-items-button{
+	height:80px;
+	width:40px;
+	left:10px;
+	top:50%;
+	margin-top:-40px;
+	position: absolute;
+	z-index:8;
+	background: url(../img/mark/arrow.png) center center no-repeat;
+			
+}
+.banner-items-button:hover{
+	background-color:rgba(0,0,0,0.4);
+	opacity: 0.6;
+	filter:alpha(opacity=60);
+}
+.next{
+	right:0;
+	left:auto;
+}
+.prev{
+	transform:rotate(180deg);
+}
+
+/*二十四节气*/
+.twenty-four-solar-terms{
+	height: auto;
+	min-height: 400px;
+	width: 87%;
+	margin:30px auto auto auto;
+	/*background: rgba(15,204,255,0.2);*/
+	/*background: #99CC33;*/
+}
+.twenty-four-solar-terms .title,
+.title-english{
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	font-size:23px;
+	/*background:red;*/
+	letter-spacing: 10px;
+	font-weight: 700;
+}
+.title-english{
+	/*background: yellow;*/
+	width:300px;
+	margin:10px auto;
+	font-size:18px;
+	height: 55px;
+	line-height: 40px;
+	border-bottom: 3px solid #333;
+	letter-spacing: 2px;
+	font-weight: normal;
+	box-sizing: border-box;
+
+}
+
+.twenty-four-solar-terms-content{
+	height: 240px;
+	width: 90%;
+	margin:20px auto auto auto;
+	/*background: red;*/
+	
+}
+.twenty-four-solar-terms-content ul li,
+.twenty-four-solar-terms-content ul li img{
+	height: 240px;
+	width: 24%;
+	float: left;
+	background:  #CCCC33;
+	line-height: 240px;
+	text-align: center;
+	box-shadow: 0 0 3px rgba(15,204,255,0.2);
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+.twenty-four-solar-terms-content ul li img{
+	width: 100%;
+}
+
+
+/*关于动植物天气网站的介绍*/
+.collection-of-animals-and-plants{
+	height: auto;
+	min-height: 400px;
+	width: 40%;
+	/*line-height: 400px ;
+	text-align: center;*/
+	padding:20px;
+	box-sizing: border-box; 
+	margin:20px auto 50px auto;
+	background: rgba(204,255,204,0.5);
+	box-shadow: 0 0 4px rgba(15,204,255,0.2);
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-webkit-border-radius: 6px;
+}
+.collection-of-animals-and-plants-title{
+	line-height: 50px;
+	/*background: red;*/
+	padding:0 6px 15px 0;
+	width:50%;
+	margin:auto;
+	text-align: center;
+	box-sizing: border-box;
+	font-size: 23px;
+	letter-spacing: 2px;
+	border-bottom:3px solid black;
+}
+.collection-of-animals-and-plants-content{
+	line-height: 40px;
+	color: #339999;
+	font-size: 16px;
+}
+
+/*气候展示*/
+.climate-display{
+	position: relative;
+	width: 100%;
+	height: 320px;
+	background: #99CC33;
+	margin:15px auto 20px auto;
+}
+.climate-display-img{
+	display: block;
+	height: 320px;
+	width: 100%;
+	float: left;
+}
+.climate-display-box{
+	height: 250px;
+	width:280px;
+	background: rgba(255,255,255,0.7);
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left: -140px;
+	margin-top:-125px; 
+	box-shadow: 0 0 4px rgba(255,255,255,0.7);
+	border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	-ms-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	padding: 15px;
+	box-sizing: border-box;
+
+}
+.climate-display-box:hover{
+	transform: scale(1.1);
+	-moz-transform: scale(1.1);
+	-o-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	cursor: pointer;
+	transition: 0.5s;
+	-moz-transition: 0.5s;
+	-o-transition: 0.5s;
+	-ms-transition: 0.5s;
+	-webkit-transition: 0.5s;
+	cursor: pointer;
+}
+.climate-display-title,
+.climate-display-title-english{
+	height: 40px;
+	width: 100%;
+	text-align: center;
+	line-height: 40px;
+	font-size:17px;
+	/*background:red;*/
+	letter-spacing: 2px;
+	font-weight: 700;
+}
+.climate-display-title-english{
+	/*background: yellow;*/
+	
+	margin:3px auto;
+	font-size:14px;
+	padding:3px 10px;
+	line-height: 30px;
+	border-bottom: 3px solid #333;
+	font-weight: normal;
+	box-sizing: border-box;
+
+}
+.climate-display-box-img{
+	display: block;
+	margin:auto;
+	width: 130px;
+	height: 130px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	margin-top:5px;
+}
+
+/*页脚*/
+footer{
+	min-height: 120px;
+	height: auto;
+	width: 	100%;
+	background: rgba(255,255,255,0.5);
+}
+.footer-logo{
+	width: 100%;
+	height: auto;
+	min-height: 80px;
+	/*background: red;*/
+}
+.footer-logo img{
+	display: block;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	-moz-border-radius: 50%;
+	-o-border-radius: 50%;
+	-ms-border-radius: 50%;
+	-webkit-border-radius: 50%;
+	margin:auto;
+}
+.footer-title{
+	line-height:60px;
+	font-size: 20px;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 8px;
+	padding-bottom: 30px;
+}
+.hidden{
+	display: none;
+}
+.green{
+	color:#339933;
+}
+
+
+/*符号导入*/
+@font-face{
+  font-family: "iconfont";src:url("img/font/iconfont.eot");src:url("img/font/iconfont.eot") format("embedded-opentype"),
+  url("img/font/iconfont.woff") format("woff"),url("img/font/iconfont.tty") format("truetype"),url("img/font/iconfont.svg#iconfont") format("svg");
+}
+
+/*兼容移动适配端*/
+/*768是官网bootstrap上的官方数字*/
+@media screen and (max-width: 768px) {
+
+	.main {
+    padding-right: 10px;
+  }
+  .nav {
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    float: none;
+  }
+  .nav-flag .nav {
+    height: 160px;
+  }
+  .rside-flag .main {
+    left: -250px;
+    overflow: visible;
+  }
+  .nav li {
+    padding: 0;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    text-align: center;
+  }
+  .nav a {
+    display: block;
+  }
+  .show-nav {
+    transform: scale(1);
+  }
+
+}
+

@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding:0;
+	font-size:15px;
+	font-family: "PingFang SC","微软雅黑","Microsoft YaHei",Helvetica,"Helvetica Neue",Tahoma,Arial;
+	color:#333;
+}
+body{
+	position: relative;
+	min-height: 400px;
+	min-width: 1000px;
+}
+ul{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+	color:#333;
+}
+/*h5重设标签*/
+article,aside,dialog,footer,header,section,nav,figure,menu{display:block}

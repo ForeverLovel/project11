@@ -1,0 +1,83 @@
+body{
+	height: 100%;
+	width: 100%;
+	min-height: 800px;
+	min-width: 800px;
+	background-size:100% 100%;
+	background-attachment: fixed;
+	background-image:url(../img/banner/banner7.jpg);
+}
+.container{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	margin-left:-211px;
+	margin-top: -247px;
+	height: auto;
+	min-height: 494px;
+	width: 422px;
+	border-radius: 6px;
+	-ms-border-radius: 6px;
+	-moz-border-radius: 6px;
+	-o-border-radius: 6px;
+	-webkit-border-radius: 6px;
+	background:rgba(255,255,255,0.9);
+	padding:60px 30px;
+	box-sizing: border-box;
+}
+.title{
+	height: 60px;
+	width: 100%;
+	text-align: center;
+	/*background: red;*/
+	font-size: 25px;
+	font-weight: 500;
+	line-height: 60px;
+	letter-spacing: 10px;
+	text-shadow: 3px 0 5px rgb(240,245,249);
+	margin-bottom: 10px;
+}
+.item{
+	height: 40px;
+	width: 100%;
+	/*background: red;*/
+	margin:20px auto;
+}
+.forgetpassword a{
+	display: block;
+	text-align: right;
+	/*background:yellow;*/
+	color: #043567;
+	font-size: 13px;
+}
+.item input,
+.item button{
+	height: 40px;
+	width: 100%;
+	display: block;
+	border:0;
+	border-radius: 3px;
+	margin: auto;
+}
+.item input{
+	box-sizing: border-box;
+	padding-left: 10px;
+}
+.item button{
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 8px;
+	background: rgba(232,204,81,0.9);
+}
+.item button:hover{
+	cursor: pointer;
+	opacity: 0.8;
+}
+.register{
+	color: #999ea2;
+}
+
+.register a{
+	color: #043567;
+	font-size: 14px;
+}
